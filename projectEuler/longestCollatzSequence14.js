@@ -1,8 +1,12 @@
 // grab the length of the chain 
 
-const lengthChain = (num) => {
+const lengthChain = (num, map) => {
     let count = 1; 
     while (num > 1){ 
+        if (map.get(num)) {
+            count += map.get(num);
+            break;
+        }
         if (num % 2 === 0) {
             num /= 2;
         } else {
@@ -17,16 +21,17 @@ const lengthChain = (num) => {
 
 const longestChain = () => {
     const map = new Map()
-    let longest = 0;
-    map.set('result', 0);
-    for (let i = 999999; i > 1; i--) {
-        chainLength = lengthChain(i);
-        if (chainLength > longest) {
-            longest = chainLength;
-            map.set('result', i);
+    let longestLength = 0;
+    let longestStarter = 0;
+    for (let i = 2; i < 1000000; i++) {
+        chainLength = lengthChain(i, map);
+        map.set(i, chainLength)
+        if (chainLength > longestLength) {
+            longestLength = chainLength;
+            longestStarter = i;
         } 
     }
-    return map.get('result');
+    return longestStarter;
 }
 
 console.time("END");
