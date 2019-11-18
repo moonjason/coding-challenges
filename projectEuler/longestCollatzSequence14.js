@@ -3,8 +3,8 @@
 const lengthChain = (num, map) => {
     let count = 1; 
     while (num > 1){ 
-        if (map.get(num)) {
-            count += map.get(num);
+        if (map.get(num)) { // memoization | checking to see if map already has length of a number in the chain
+            count += map.get(num); // if we see a length of a num in a chain, stop the loop and just add rest
             break;
         }
         if (num % 2 === 0) {
