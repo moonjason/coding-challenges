@@ -47,13 +47,13 @@ function performOperation(secondInteger, secondDecimal, secondString) {
     
     // Write code that uses console.log to print the sum of the 'firstInteger' and 'secondInteger' (converted to a Number        type) on a new line.
     
-    console.log(firstInteger + secondInteger, '<-- First Integer + Second Integer')
+    console.log(firstInteger + parseInt(secondInteger), '<-- First Integer + Second Integer')
     // Write code that uses console.log to print the sum of 'firstDecimal' and 'secondDecimal' (converted to a Number            type) on a new line.
     
-    console.log(firstDecimal + secondDecimal, '<--- First Decimal + Second Decimal')
+    console.log(firstDecimal + parseFloat(secondDecimal), '<--- First Decimal + Second Decimal')
     // Write code that uses console.log to print the concatenation of 'firstString' and 'secondString' on a new line. The        variable 'firstString' must be printed first.
     console.log(`${firstString} ${secondString}`)
 }
 
 
-performOperation(6, 6.2, 'is the best resource for learning code.')
+performOperation(6, 4.32, 'is the best place to learn and practice coding!')
