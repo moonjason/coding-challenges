@@ -28,3 +28,20 @@ function getPerimeter(length, width) {
     perimeter = (2 * length) + (2 * width);
     return perimeter;
 }
+
+/*
+ * Complete the vowelsAndConsonants function.
+ * Print your output using 'console.log()'.
+ */
+function vowelsAndConsonants(s) {
+    const word = s.split('')
+    for (let i = 0; i < word.length; i ++){ 
+        if(word[i].match([])){
+            console.log(word[i])
+            word.splice(i ,1)
+        }
+    }
+    console.log(word)
+}
+
+vowelsAndConsonants('hello');
