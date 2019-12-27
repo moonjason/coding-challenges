@@ -17,7 +17,7 @@ function vowelsAndConsonants(s) {
     }
 }
 
-vowelsAndConsonants('javascriptloops');
+// vowelsAndConsonants('javascriptloops');
 
 
 // #2 If - Else Statements
@@ -39,4 +39,26 @@ function getGrade(score) {
         grade = 'F'
     }
     return grade;
+}
+
+
+// #3 switch statements
+// REMEMBER your switch statement should be whatever the case has to equal to !!!! 
+
+function getLetter(s) {
+    let letter = s[0];
+    switch(true) {
+        case ['a','e','i','o','u'].indexOf(letter) !== -1:
+            return 'A';
+            break;
+        case ['b','c','d','f','g'].indexOf(letter) !== -1:
+            return 'B';
+            break;
+        case ['h','j','k','l','m'].indexOf(letter) !== -1:
+            return 'C';
+            break;
+        default:
+            return 'D';
+    }   
+    return letter;
 }
