@@ -28,3 +28,18 @@ function getPerimeter(length, width) {
     perimeter = (2 * length) + (2 * width);
     return perimeter;
 }
+
+/*
+ * Create the function factorial here
+ */
+function factorial(num){
+    let result = num;
+    let count = 1; 
+    while (count < num - 1){
+        count ++;
+        result *= count;
+    }
+    return result;
+}
+
+console.log(factorial(4))
