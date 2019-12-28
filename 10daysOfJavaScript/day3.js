@@ -17,3 +17,16 @@ function getSecondLargest(nums) {
     };
     return secondLargest;
 }
+
+
+// #2 Try, Catch, and Finally
+
+function reverseString(s) {
+    try {
+        console.log(s.split('').reverse().join(''))
+        // if nothing is put into join() elements are automatically separated by commas
+    } catch(err){
+        console.log(err.message)
+        console.log(s)
+    }
+}
