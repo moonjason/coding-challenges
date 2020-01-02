@@ -64,7 +64,7 @@ function sides(literals, ...expressions) {
  * Parameter(s):
  * nums: An array of numbers.
  */
-function modifyArray(nums) {
+const modifyArray = (nums) => {
     for (let i = 0; i < nums.length; i++ ){
         nums[i] % 2 === 0 ? nums[i] *= 2 : nums[i] *= 3;
     } 
