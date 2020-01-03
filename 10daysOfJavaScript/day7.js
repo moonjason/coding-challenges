@@ -3,8 +3,11 @@
      * Declare a RegExp object variable named 're'
      * It must match a string that starts and ends with the same vowel (i.e., {a, e, i, o, u})
      */
-    
-function regexVar(str) {
+
+// Check to see if a str begins AND ends with the same vowel
+// abda => true
+// abdi => false
+function vowelChecker(str) {
     //  ^ => first item matches:
     // () => stores matching value captured within
     // [aeiou] => matches any of the characters in the brackets
