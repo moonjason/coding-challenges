@@ -32,9 +32,6 @@ function regexVar() {
     const re = /^(Mr|Mrs|Ms|Dr|Er)(\.)([a-zA-Z])*$/
     // (\.)  to match a period (special character: needs to be escaped by a \)
     // $ means the string must end with the character expression just before it. In this case it must end with an [A-za-z] character and not anything else.
-    /*
-     * Do not remove the return statement
-     */
     return re;
 }
 
