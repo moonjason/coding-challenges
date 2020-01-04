@@ -37,3 +37,15 @@ function regexVar() {
      */
     return re;
 }
+
+function regexVar() {
+    /*
+     * Declare a RegExp object variable named 're'
+     * It must match ALL occurrences of numbers in a string.
+     */
+    return new RegExp('\\d+', 'g');
+    // \d  matches [0-9]
+    // + is match the longest possible (greedy)
+    // add the two above together, match the longest numbers
+    // g is global flag 
+}
