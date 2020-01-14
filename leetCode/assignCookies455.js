@@ -21,27 +21,22 @@
 // You have 3 cookies and their sizes are big enough to gratify all of the children, 
 // You need to output 2.
 
-
-const findContentChildren = (g, s) => {
-    let result = 0;
-    const map = new Map();
-    s.forEach(num => {
-        map.has(num) ? map.set(num, map.get(num) + 1) : map.set(num, 1)
-    })
-    for(let i = 0; i < g.length; i++){
-        if ( map.has(g[i]) ) {
-            map.set(g[i], map.get(g[i]) - 1)
-            if(map.get(g[i]) === 0){
-                map.delete(g[i])
-            }
-            result++
-        }
-        if (map.size === 0){
-            break;
+// greedy algorithm 
+const findContentChildren = function(g, s) {
+    let solution = 0; //how many ppl are fed
+    let greedIndex = 0;
+    
+    g.sort((a,b) => a-b); // increasing order 
+    s.sort((a,b) => a-b);
+    
+    for(let cookieSize of s){
+        if(cookieSize >= g[greedIndex]){
+            solution ++
+            greedIndex ++
         }
     }
-    return result; 
-}
+    return solution
+};
 
 console.log(findContentChildren([10,9,8,7,10,9,8,7],[10,9,8,7]))
 
