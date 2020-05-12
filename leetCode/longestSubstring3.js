@@ -15,10 +15,10 @@ const lengthOfLongestSubstring = (str) => {
 
     for(let right = 0; right < str.length; right++) {
         if(charCount.has(str[right])) {
-            left = Math.max(left, charCount.get(str[right]) + 1)
+            left = Math.max(left, charCount.get(str[right]) + 1) // we check which one is larger in case our startWindow passes a previously seen character!!
         }
         charCount.set(str[right], right);
-        longest = Math.max(longest, right - left + 1);
+        longest = Math.max(longest, right - left + 1); // right - left is the size of the window and we add 1 because of indices
     }
 
     return longest;
