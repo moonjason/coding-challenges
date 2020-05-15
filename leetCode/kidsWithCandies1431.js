@@ -4,6 +4,10 @@
 //  * @return {boolean[]}
 //  */
 
+// https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/
+// Leet code easy 
+// Arrays
+
 var kidsWithCandies = function(candies, extraCandies) {
     const res = [];
     let largest = 0;
